@@ -1,3 +1,5 @@
 import React from 'react';
 
-export const Watchlist = () => {};
+export const Watchlist = () => {
+	return <h1>watchlist</h1>;
+};

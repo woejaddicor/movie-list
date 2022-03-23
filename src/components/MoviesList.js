@@ -4,10 +4,9 @@ export const MoviesList = (movieData) => {
 	const renderedMovies = movieData.movieData.map((movie) => {
 		return (
 			<div className="movie-card" key={movie.imdbID}>
-				<div className="title-container">
-					<h1 className="movie-title">{movie.Title}</h1>
-				</div>
-				<img src={movie.Poster} alt="movie" />
+				<div className="title-container"></div>
+				<img className="poster" src={movie.Poster} alt="Stock poster" />
+				<h1 className="movie-title">{movie.Title}</h1>
 				<p className="title-info">{movie.Type}</p>
 				<p className="title-info">{movie.Year}</p>
 				<a

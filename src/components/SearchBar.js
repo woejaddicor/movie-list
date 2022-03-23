@@ -5,6 +5,7 @@ export const SearchBar = ({ movie, handleSearch, setMovie }) => {
 		<div>
 			<input
 				type="text"
+				className="search-bar"
 				value={movie}
 				onChange={(e) => setMovie(e.target.value)}
 				placeholder="Search for a movie"
@@ -15,7 +16,11 @@ export const SearchBar = ({ movie, handleSearch, setMovie }) => {
 					}
 				}}
 			/>
-			<button type="submit" onClick={() => handleSearch()}>
+			<button
+				type="submit"
+				className="search-button"
+				onClick={() => handleSearch()}
+			>
 				Search
 			</button>
 			<div>

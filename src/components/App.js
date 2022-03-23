@@ -38,7 +38,9 @@ const App = () => {
 				/>
 			</div>
 			{!movieData ? (
-				<h1>no results found</h1>
+				<div>
+					<h1 className="no-results">no results found</h1>
+				</div>
 			) : (
 				<>
 					<div className="movie-container">
