@@ -1,11 +1,13 @@
 .App {
 	text-align: center;
+	background-color: black;
 }
 
 .header {
 	background-color: black;
 	color: white;
 	padding: 20px;
+	border-bottom: 5px solid rgb(169, 169, 255);
 }
 
 .movie-container {
@@ -89,5 +91,34 @@
 
 .poster {
 	height: 55%;
-	position: relative;
+}
+
+.empty-watchlist {
+	background-color: black;
+}
+
+.navbar-home {
+	color: white;
+	text-decoration: double;
+	font-size: 25px;
+	width: fit-content;
+	margin-left: 5px;
+	border: 2px solid rgb(145, 145, 253);
+	padding: 5px;
+	border-radius: 5px;
+}
+
+.navbar-watchlist {
+	color: white;
+	text-decoration: double;
+	font-size: 25px;
+	width: fit-content;
+	margin-right: 5px;
+	border: 2px solid rgb(145, 145, 253);
+	padding: 5px;
+	border-radius: 5px;
+}
+
+.searchbar-container {
+	width: 80%;
 }

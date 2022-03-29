@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-export const MoviesList = ({ addFavourite, movieData }) => {
-	const [disable, setDisable] = useState(false);
-
-	const renderedMovies = movieData.map((movie) => {
+export const Favourites = ({ removeFavouriteMovie, watchlist }) => {
+	const renderedWatchlist = watchlist.map((movie) => {
 		return (
 			<div className="movie-card" key={movie.imdbID}>
 				<div className="title-container"></div>
@@ -18,18 +16,9 @@ export const MoviesList = ({ addFavourite, movieData }) => {
 					More information
 				</a>
 				<br />
-				<button
-					onClick={() => {
-						addFavourite(movie);
-						setDisable(true);
-					}}
-					className="watchlist-button"
-					disabled={disable}
-				>
-					Add to Watchlist
-				</button>
+				<button onClick={() => removeFavouriteMovie(movie)}>Remove</button>
 			</div>
 		);
 	});
-	return renderedMovies;
+	return renderedWatchlist;
 };

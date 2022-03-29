@@ -2,7 +2,7 @@ import React from 'react';
 
 export const SearchBar = ({ movie, handleSearch, setMovie }) => {
 	return (
-		<div>
+		<div className="searchbar-container">
 			<input
 				type="text"
 				className="search-bar"
