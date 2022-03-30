@@ -1,11 +1,12 @@
 import React from 'react';
+import styles from '../CSS-Components/SearchBar.module.css';
 
 export const SearchBar = ({ movie, handleSearch, setMovie }) => {
 	return (
-		<div className="searchbar-container">
+		<div className={styles.searchbarContainer}>
 			<input
 				type="text"
-				className="search-bar"
+				className={styles.searchbar}
 				value={movie}
 				onChange={(e) => setMovie(e.target.value)}
 				placeholder="Search for a movie"
@@ -18,7 +19,7 @@ export const SearchBar = ({ movie, handleSearch, setMovie }) => {
 			/>
 			<button
 				type="submit"
-				className="search-button"
+				className={styles.searchButton}
 				onClick={() => handleSearch()}
 			>
 				Search

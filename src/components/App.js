@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../styles/App.css';
+import styles from '../CSS-Components/App.module.css';
 import { getMovieData } from '../apis/omdb';
 import { SearchBar } from './SearchBar';
 import { MoviesList } from './MoviesList';
@@ -58,23 +58,21 @@ const App = () => {
 	};
 
 	return (
-		<div className="App">
+		<div className={styles.app}>
 			<Router>
-				<div className="header">
-					<Header
-						SearchBar={SearchBar}
-						setMovie={setMovie}
-						search={movie}
-						handleSearch={handleSearch}
-					/>
-				</div>
+				<Header
+					SearchBar={SearchBar}
+					setMovie={setMovie}
+					search={movie}
+					handleSearch={handleSearch}
+				/>
 				{!movieData ? (
-					<div>
-						<h1 className="no-results">No results found</h1>
+					<div className={styles.noResultsContainer}>
+						<h1 className={styles.noResultsText}>No results found</h1>
 					</div>
 				) : (
 					<>
-						<div className="movie-container">
+						<div className={styles.movieContainer}>
 							<Routes>
 								<Route
 									path="/watchlist"

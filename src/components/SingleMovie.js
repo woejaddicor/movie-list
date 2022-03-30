@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getSingleMovie } from '../apis/omdb';
+import styles from '../CSS-Components/SingleMovie.module.css';
 
 export const SingleMovie = ({ addFavourite }) => {
 	const [movie, setMovie] = useState([]);
@@ -17,31 +18,34 @@ export const SingleMovie = ({ addFavourite }) => {
 	}, [imdbID]);
 
 	return (
-		<div className="single-movie container" style={{ color: 'white' }}>
-			<h1>{movie.Title}</h1>
-			<p>
+		<div className={styles.singleMovieContainer}>
+			<h1 className={styles.title}>{movie.Title}</h1>
+			<p className={styles.movieInfo}>
 				{movie.Released} - {movie.Rated} - {movie.Runtime}
 			</p>
-			<img className="poster" src={movie.Poster} alt="Stock poster" />
-			<p>{movie.Actors}</p>
-			<p>{movie.Awards}</p>
-			<p>{movie.BoxOffice}</p>
-			<p>{movie.Country}</p>
-			<p>{movie.DVD}</p>
-			<p>{movie.Director}</p>
-			<p>{movie.Language}</p>
-			<p>{movie.Genre}</p>
-			<p>Metascore: {movie.Metascore}</p>
-			<p>{movie.Plot}</p>
-			<num>IMDB rating: {movie.imdbRating} ⭐️</num>
+			<img className={styles.poster} src={movie.Poster} alt="Stock poster" />
+			<p className={styles.movieInfo}>{movie.Actors}</p>
+			<p className={styles.movieInfo}>{movie.Awards}</p>
+			<p className={styles.movieInfo}>{movie.BoxOffice}</p>
+			<p className={styles.movieInfo}>{movie.Country}</p>
+			<p className={styles.movieInfo}>{movie.DVD}</p>
+			<p className={styles.movieInfo}>{movie.Director}</p>
+			<p className={styles.movieInfo}>{movie.Language}</p>
+			<p className={styles.movieInfo}>{movie.Genre}</p>
+			<p className={styles.movieInfo}>Metascore: {movie.Metascore}</p>
+			<p className={styles.movieInfo}>{movie.Plot}</p>
+			<num className={styles.movieInfo}>
+				IMDB rating: {movie.imdbRating} ⭐️
+			</num>
 			<br></br>
-			<num>IMDB Votes: {movie.imdbVotes}</num>
+			<num className={styles.movieInfo}>IMDB Votes: {movie.imdbVotes}</num>
+			<br></br>
 			<button
 				onClick={() => {
 					addFavourite(movie);
 					setDisable(true);
 				}}
-				className="watchlist-button"
+				className={styles.watchlistButton}
 				disabled={disable}
 			>
 				Add to Watchlist

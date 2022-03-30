@@ -1,23 +1,16 @@
 import React from 'react';
+import styles from '../CSS-Components/Favourites.module.css';
 
 export const Favourites = ({ removeFavouriteMovie, watchlist }) => {
 	const renderedWatchlist = watchlist.map((movie) => {
 		return (
-			<div className="movie-card" key={movie.imdbID}>
-				<div className="title-container"></div>
-				<img className="poster" src={movie.Poster} alt="Stock poster" />
-				<h1 className="movie-title">{movie.Title}</h1>
-				<p className="title-info">{movie.Type}</p>
-				<p className="title-info">{movie.Year}</p>
-				<a
-					className="imdb-link"
-					href={`https://imdb.com/title/${movie.imdbID}`}
-				>
-					More information
-				</a>
+			<div className={styles.movieCard} key={movie.imdbID}>
+				<div className={styles.titleContainer}></div>
+				<img className={styles.poster} src={movie.Poster} alt="Stock poster" />
+				<h1 className={styles.title}>{movie.Title}</h1>
 				<br />
 				<button
-					className="watchlist-button"
+					className={styles.removeFavouriteButton}
 					onClick={() => removeFavouriteMovie(movie)}
 				>
 					Remove
