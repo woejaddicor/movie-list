@@ -7,6 +7,7 @@ import { SearchBar } from './SearchBar';
 import { MoviesList } from './MoviesList';
 import { Header } from './Header';
 import { Favourites } from './Favourites';
+import { SingleMovie } from './SingleMovie';
 
 const App = () => {
 	const [movie, setMovie] = useState('The Batman');
@@ -92,6 +93,10 @@ const App = () => {
 											addFavourite={addFavourite}
 										/>
 									}
+								></Route>
+								<Route
+									path="/:imdbID"
+									element={<SingleMovie addFavourite={addFavourite} />}
 								></Route>
 							</Routes>
 						</div>

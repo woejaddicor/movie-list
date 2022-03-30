@@ -16,7 +16,12 @@ export const Favourites = ({ removeFavouriteMovie, watchlist }) => {
 					More information
 				</a>
 				<br />
-				<button onClick={() => removeFavouriteMovie(movie)}>Remove</button>
+				<button
+					className="watchlist-button"
+					onClick={() => removeFavouriteMovie(movie)}
+				>
+					Remove
+				</button>
 			</div>
 		);
 	});
