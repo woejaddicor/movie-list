@@ -12,34 +12,40 @@ export const SingleMovie = ({ addFavourite }) => {
 	useEffect(() => {
 		setLoading(true);
 		getSingleMovie(imdbID).then((movie) => {
-			console.log(movie);
 			setMovie(movie);
 		});
 	}, [imdbID]);
 
+	console.log(movie);
+
 	return (
-		<div className={styles.singleMovieContainer}>
-			<h1 className={styles.title}>{movie.Title}</h1>
-			<p className={styles.movieInfo}>
-				{movie.Released} - {movie.Rated} - {movie.Runtime}
-			</p>
-			<img className={styles.poster} src={movie.Poster} alt="Stock poster" />
-			<p className={styles.movieInfo}>{movie.Actors}</p>
-			<p className={styles.movieInfo}>{movie.Awards}</p>
-			<p className={styles.movieInfo}>{movie.BoxOffice}</p>
-			<p className={styles.movieInfo}>{movie.Country}</p>
-			<p className={styles.movieInfo}>{movie.DVD}</p>
-			<p className={styles.movieInfo}>{movie.Director}</p>
-			<p className={styles.movieInfo}>{movie.Language}</p>
-			<p className={styles.movieInfo}>{movie.Genre}</p>
-			<p className={styles.movieInfo}>Metascore: {movie.Metascore}</p>
-			<p className={styles.movieInfo}>{movie.Plot}</p>
-			<num className={styles.movieInfo}>
-				IMDB rating: {movie.imdbRating} ⭐️
-			</num>
-			<br></br>
-			<num className={styles.movieInfo}>IMDB Votes: {movie.imdbVotes}</num>
-			<br></br>
+		<div className={styles.container}>
+			<div className={styles.poster}>
+				<img className={styles.poster} src={movie.Poster} alt=""></img>
+			</div>
+			<div className={styles.movieTitle}>
+				<h1>{movie.Title}</h1>
+				<p className={styles.title}>{movie.Released}</p>
+				<p className={styles.title}>{movie.Runtime}</p>
+			</div>
+			<div className={styles.info1}>
+				<p className={styles.info1}>Director : {movie.Director}</p>
+				<p className={styles.info1}>Writer : {movie.Writer}</p>
+				<p className={styles.info1}>Genre : {movie.Genre}</p>
+				<p className={styles.info1}>Rated: {movie.Rated}</p>
+			</div>
+			<div className={styles.info2}>
+				<p className={styles.info2}>Cast : {movie.Actors}</p>
+				<p className={styles.plot}>Plot Summary : '{movie.Plot}'</p>
+			</div>
+			<div className={styles.info3}>
+				<p className={styles.imdbRating}>
+					IMDB Rating : {movie.imdbRating} ⭐️
+				</p>
+				<p className={styles.info3}>IMDB Votes : {movie.imdbVotes}</p>
+				<p className={styles.info3}>Metascore : {movie.Metascore}</p>
+				<p className={styles.info3}>Awards : {movie.Awards}</p>
+			</div>
 			<button
 				onClick={() => {
 					addFavourite(movie);

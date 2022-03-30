@@ -1,8 +1,17 @@
-.navbarButtons {
+.navbarHome {
 	color: white;
 	text-decoration: double;
-	font-size: 25px;
-	padding: 10px;
+	font-size: 20px;
+	display: inline-flex;
+	margin-right: 20px;
+}
+
+.navbarWatchlist {
+	color: white;
+	text-decoration: double;
+	font-size: 20px;
+	display: inline-flex;
+	margin-left: 20px;
 }
 
 .navbar {
@@ -10,16 +19,4 @@
 	width: 100%;
 	padding: 20px;
 	border-bottom: 5px solid rgb(169, 169, 255);
-}
-
-.searchbar {
-	width: 50%;
-	height: 45px;
-	border: 5px solid rgb(169, 169, 255);
-	border-radius: 5px;
-	margin-top: 5px;
-	font-size: large;
-	text-transform: capitalize;
-	background-color: rgb(227, 227, 248);
-	font-weight: bold;
 }

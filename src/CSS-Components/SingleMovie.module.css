@@ -1,24 +1,105 @@
-.singleMovieContainer {
+.container {  display: grid;
+	margin-left: 20px;
+	width: 70vw;
+	height: 80vh;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	gap: 0px 0px;
+	grid-auto-flow: row;
+	grid-template-areas:
+	  "poster info1 info1"
+	  "poster info2 info2"
+	  "title info3 info3";
+  }
+  
+  .poster { grid-area: poster;}
+
+  .poster {
+	  margin-top: 15px;
+	  width: 100%;
+	  height: 100%;
+	  border-radius: 10px;
+  }
+  
+  .title { grid-area: title; }
+
+  .movieTitle {
+	  margin-top: 40px;
+	  color: white;
+  }
+
+  .title {
+	  margin-top: 10px;
+	  font-size: 25px;
+	  text-align: center;
+	  background-color: black;
+	  color: white
+  }
+  
+  .info1 { grid-area: info1; }
+
+  .info1 {
+	  margin-left: 20px;
+	  text-align: left;
+	  background-color: black;
+	  margin-top: 20px;
+	  font-size: 20px;
+	  color: white;
+	  width: 20vw;
+	  font-size: 25px;
+  }
+  
+  .info2 { grid-area: info2; }
+  
+  .info2 {
+	  height: fit-content;
+	  font-size: 25px;
+	  margin-left: 20px;
+	  background-color: black;
+	  text-align: left;
+	  color: white;
+  }
+
+  .plot {
+	font-size: 25px;
+	margin-left: 20px;
 	background-color: black;
-}
+	text-align: left;
+	font-style: italic;
+	color: white; 
+  }
+  
+  .info3 { grid-area: info3; }
 
-.title {
-	color: white;
-}
+  .info3 {
+	  font-size: 25px;
+	  margin-left: 20px;
+	  text-align: left;
+	  background-color: black;
+	  color: white;
+  }
 
-.movieInfo {
-	color: white;
-}
-
-.poster {
-}
-
-.watchlistButton {
+  .watchlistButton {
+	text-align: center;
 	background-color: black;
 	color: white;
-	width: 150px;
-	height: 50px;
+	width: 40%;
+	height: 10%;
+	font-size: 20px;
 	border-radius: 5px;
 	margin-top: 10px;
-	margin-bottom: 10px;
-}
+	margin-left: 30%;
+  }
+
+  .watchlistButton :hover {
+	  color: gold;
+  }
+  
+  .imdbRating {
+	  font-size: 25px;
+	  margin-left: 20px;
+	  text-align: left;
+	  background-color: black;
+	  color: white;
+  }
+  

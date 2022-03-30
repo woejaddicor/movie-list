@@ -10,12 +10,14 @@ export const Header = ({ setMovie, search, handleSearch, SearchBar }) => {
 				search={search}
 				handleSearch={handleSearch}
 			/>
-			<a className={styles.navbarButtons} href="/">
-				HOME
-			</a>
-			<a className={styles.navbarButtons} href="/watchlist">
-				WATCHLIST
-			</a>
+			<div className={styles.buttonsContainer}>
+				<a className={styles.navbarHome} href="/">
+					HOME
+				</a>
+				<a className={styles.navbarWatchlist} href="/watchlist">
+					WATCHLIST
+				</a>
+			</div>
 		</div>
 	);
 };
