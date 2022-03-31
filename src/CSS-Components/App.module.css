@@ -3,21 +3,6 @@
 	background-color: black;
 }
 
-.movieContainer {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-	background-color: black;
-	grid-template-rows: 1fr 1fr;
-	width: 100vw;
-	height: 100vh;
-	gap: 10px 10px;
-	grid-auto-flow: row;
-	grid-template-areas:
-		'left right .'
-		'left right .'
-		'. . .';
-}
-
 .noResultsContainer {
 	background-color: black;
 }
@@ -25,56 +10,3 @@
 .noResultsText {
 	color: purple;
 }
-/* @keyframes iconanimation {
-	from {
-		transform: scale(0.5, 0.5);
-	}
-	to {
-		transform: scale(1, 1);
-	}
-}
-
-@media only screen and (min-width: 600px) {
-	.search-form input {
-		width: 70%;
-	}
-	.search-form button {
-		width: 20%;
-	}
-}
-
-@media only screen and (max-width: 600px) {
-	.search-form input {
-		width: 70%;
-	}
-	.search-form button {
-		width: 15%;
-	}
-}
-
-@media only screen and (min-width: 768px) {
-	.search-form input {
-		width: 70%;
-	}
-	.search-form button {
-		width: 18%;
-	}
-}
-
-@media only screen and (min-width: 992px) {
-	.search-form input {
-		width: 70%;
-	}
-	.search-form button {
-		width: 18%;
-	}
-}
-
-@media only screen and (min-width: 1200px) {
-	.search-form input {
-		width: 70%;
-	}
-	.search-form button {
-		width: 18%;
-	}
-} */

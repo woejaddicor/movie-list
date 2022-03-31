@@ -8,6 +8,7 @@ import { MoviesList } from './MoviesList';
 import { Header } from './Header';
 import { Favourites } from './Favourites';
 import { SingleMovie } from './SingleMovie';
+import { Test } from './Test';
 
 const App = () => {
 	const [movie, setMovie] = useState('The Batman');
@@ -72,32 +73,36 @@ const App = () => {
 					</div>
 				) : (
 					<>
-						<div className={styles.movieContainer}>
-							<Routes>
-								<Route
-									path="/watchlist"
-									element={
-										<Favourites
-											watchlist={watchlist}
-											removeFavouriteMovie={removeFavouriteMovie}
-										/>
-									}
-								></Route>
-								<Route
-									path="/"
-									element={
-										<MoviesList
-											movieData={movieData}
-											addFavourite={addFavourite}
-										/>
-									}
-								></Route>
-								<Route
-									path="/:imdbID"
-									element={<SingleMovie addFavourite={addFavourite} />}
-								></Route>
-							</Routes>
-						</div>
+						<Routes>
+							<Route
+								path="/"
+								element={
+									<MoviesList
+										movieData={movieData}
+										addFavourite={addFavourite}
+									/>
+								}
+							></Route>
+							<Route
+								path="/watchlist"
+								element={
+									<Favourites
+										watchlist={watchlist}
+										removeFavouriteMovie={removeFavouriteMovie}
+									/>
+								}
+							></Route>
+							<Route
+								path="/:imdbID"
+								element={<SingleMovie addFavourite={addFavourite} />}
+							></Route>
+							<Route
+								path="/test"
+								element={
+									<Test movieData={movieData} addFavourite={addFavourite} />
+								}
+							></Route>
+						</Routes>
 					</>
 				)}
 			</Router>

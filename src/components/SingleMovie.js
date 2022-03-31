@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getSingleMovie } from '../apis/omdb';
 import styles from '../CSS-Components/SingleMovie.module.css';
+import { SearchBar } from './SearchBar';
 
 export const SingleMovie = ({ addFavourite }) => {
 	const [movie, setMovie] = useState([]);
@@ -15,8 +16,6 @@ export const SingleMovie = ({ addFavourite }) => {
 			setMovie(movie);
 		});
 	}, [imdbID]);
-
-	console.log(movie);
 
 	return (
 		<div className={styles.container}>
