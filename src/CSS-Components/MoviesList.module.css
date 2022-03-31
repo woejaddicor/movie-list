@@ -14,13 +14,29 @@
 .card {
     border-top: 10px solid black;
 	  background-color: rgb(169, 169, 255);
+    overflow: hidden;
+    cursor: pointer;
+    transition: all ease 200ms;
   }
+
+  .card:hover {
+    transform: scale(1.01);
+    border: 5px solid rgb(142, 142, 248);
+  } 
 
   @media (min-width: 400px) {
     .movieCards { grid-template-columns: repeat(2, 1fr); }
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: 800px) {
+    .movieCards { grid-template-columns: repeat(3, 1fr);}
+  }
+
+  @media (min-width: 1000px) {
+    .movieCards { grid-template-columns: repeat(4, 1fr);}
+  }
+
+  @media (min-width: 1300px) {
     .movieCards { grid-template-columns: repeat(5, 1fr); }
   }
 
@@ -45,6 +61,10 @@
     border-radius: 8px;
     margin-top: 20px;
   }
+
+  .singleMovieButton:hover {
+    transform: scale(1.05);
+  }
   
   .singleMovieButton a {
     color: white;
@@ -61,4 +81,12 @@
     border-radius: 8px;
     font-size: medium;
     font-weight: bold;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all ease 200ms;
     }
+
+    .watchlistButton:hover {
+      transform: scale(1.05);
+    }
+    

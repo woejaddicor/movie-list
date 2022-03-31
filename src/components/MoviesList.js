@@ -9,7 +9,7 @@ export const MoviesList = ({ addFavourite, movieData }) => {
 		<div className={styles.movieCards}>
 			{movieData.map((movie) => {
 				return (
-					<div className={styles.card}>
+					<div key={movie.imdbID} className={styles.card}>
 						<div className={styles.titleContainer}></div>
 						<img
 							className={styles.poster}

@@ -11,7 +11,7 @@ import { SingleMovie } from './SingleMovie';
 import { Test } from './Test';
 
 const App = () => {
-	const [movie, setMovie] = useState('The Batman');
+	const [movie, setMovie] = useState('batman');
 	const [movieData, setMovieData] = useState([]);
 	const [loading, setLoading] = useState(false);
 	const [watchlist, setWatchlist] = useState([]);
