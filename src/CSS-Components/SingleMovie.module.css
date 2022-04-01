@@ -54,6 +54,14 @@
 	font-weight: bold;
 	border-radius: 5px;
 	margin-bottom: 20px;
+	overflow: hidden;
+    cursor: pointer;
+    transition: all ease 200ms;
+  }
+
+  .watchlistButton:hover {
+	transform: scale(1.05);
+	border: 2px solid grey;
   }
   
   .imdbRating {

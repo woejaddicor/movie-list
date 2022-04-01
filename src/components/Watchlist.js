@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from '../CSS-Components/Favourites.module.css';
 import { Link } from 'react-router-dom';
 
 export const Watchlist = ({ removeFavouriteMovie, watchlist }) => {
+	console.log(watchlist);
 	return (
 		<div className={styles.movieCards}>
 			{watchlist.map((movie) => {

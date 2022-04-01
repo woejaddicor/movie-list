@@ -13,7 +13,7 @@ const App = () => {
 	const [movie, setMovie] = useState('batman');
 	const [movieData, setMovieData] = useState([]);
 	const [loading, setLoading] = useState(false);
-	const [watchlist, setWatchlist] = useState([]);
+	const [watchlist, setWatchlist] = useState([{ item: 'test' }]);
 
 	useEffect(() => {
 		handleSearch();
@@ -87,6 +87,7 @@ const App = () => {
 								element={<SingleMovie addFavourite={addFavourite} />}
 							></Route>
 							<Route
+								default
 								path="/"
 								element={
 									<MoviesList
