@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to my movie watchlist application 👋</h1>
 
-<p>This is a simple movie searching application...
+<p>This is a simple movie searching application built using the OMDB API. Search through a library of movies, see an individual information page for each title and add movies to your favourites list.
 </p>
 
 Steps to get the project up and running:
@@ -24,7 +24,7 @@ And you should be good to go!
 Alternatively, you can view the application on the following link:
 
 ```sh
-tbc..
+https://woejaddicor-movie-app.netlify.app/
 ```
 
 ## Author
