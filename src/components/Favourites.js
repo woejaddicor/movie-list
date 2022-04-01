@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from '../CSS-Components/Favourites.module.css';
 import { Link } from 'react-router-dom';
 
-export const Watchlist = ({ removeFavouriteMovie, watchlist }) => {
-	console.log(watchlist);
+export const Favourites = ({ removeFavouriteMovie, favourites }) => {
 	return (
 		<div className={styles.movieCards}>
-			{watchlist.map((movie) => {
+			{favourites.map((movie) => {
 				return (
 					<div className={styles.movieCard} key={movie.imdbID}>
 						<div className={styles.titleContainer}></div>

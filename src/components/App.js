@@ -6,24 +6,24 @@ import { getMovieData } from '../apis/omdb';
 import { SearchBar } from './SearchBar';
 import { MoviesList } from './MoviesList';
 import { Header } from './Header';
-import { Watchlist } from './Watchlist';
+import { Favourites } from './Favourites';
 import { SingleMovie } from './SingleMovie';
 
 const App = () => {
 	const [movie, setMovie] = useState('batman');
 	const [movieData, setMovieData] = useState([]);
 	const [loading, setLoading] = useState(false);
-	const [watchlist, setWatchlist] = useState([]);
+	const [favourites, setFavourites] = useState([]);
+
+	console.log(favourites);
 
 	useEffect(() => {
 		handleSearch();
 	}, []);
 
 	useEffect(() => {
-		const localFaves = JSON.parse(
-			localStorage.getItem('react-movie-app-favourites')
-		);
-		setWatchlist(localFaves);
+		const localFaves = JSON.parse(localStorage.getItem('favourites-list'));
+		setFavourites(localFaves);
 	}, []);
 
 	const handleSearch = async () => {
@@ -39,22 +39,22 @@ const App = () => {
 	};
 
 	const saveToLocalStorage = (items) => {
-		localStorage.setItem('react-movie-app-favourites', JSON.stringify(items));
+		localStorage.setItem('favourites-list', JSON.stringify(items));
 	};
 
 	const addFavourite = (filmToAdd) => {
-		const newWatchlist = [...watchlist, filmToAdd];
-		setWatchlist(newWatchlist);
-		saveToLocalStorage(newWatchlist);
+		const newFavourites = [...favourites, filmToAdd];
+		setFavourites(newFavourites);
+		saveToLocalStorage(newFavourites);
 	};
 
 	const removeFavouriteMovie = (filmToRemove) => {
-		const newWatchlist = watchlist.filter(
+		const newFavourites = favourites.filter(
 			(item) => item.imdbID !== filmToRemove.imdbID
 		);
 
-		setWatchlist(newWatchlist);
-		saveToLocalStorage(newWatchlist);
+		setFavourites(newFavourites);
+		saveToLocalStorage(newFavourites);
 	};
 
 	return (
@@ -74,10 +74,10 @@ const App = () => {
 					<>
 						<Routes>
 							<Route
-								path="/watchlist"
+								path="/favourites"
 								element={
-									<Watchlist
-										watchlist={watchlist}
+									<Favourites
+										favourites={favourites}
 										removeFavouriteMovie={removeFavouriteMovie}
 									/>
 								}

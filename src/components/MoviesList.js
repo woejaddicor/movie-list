@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from '../CSS-Components/MoviesList.module.css';
 
 export const MoviesList = ({ addFavourite, movieData }) => {
-	const [disable, setDisable] = useState(false);
-
 	return (
 		<div className={styles.movieCards}>
 			{movieData.map((movie) => {

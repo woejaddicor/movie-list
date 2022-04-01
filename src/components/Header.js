@@ -1,5 +1,4 @@
 import React from 'react';
-import { SearchBar } from './SearchBar';
 import styles from '../CSS-Components/Header.module.css';
 
 export const Header = ({ setMovie, search, handleSearch, SearchBar }) => {
@@ -11,11 +10,12 @@ export const Header = ({ setMovie, search, handleSearch, SearchBar }) => {
 				handleSearch={handleSearch}
 			/>
 			<div className={styles.buttonsContainer}>
+				<br></br>
 				<a className={styles.navbarHome} href="/">
 					HOME
 				</a>
-				<a className={styles.navbarWatchlist} href="/watchlist">
-					WATCHLIST
+				<a className={styles.navbarWatchlist} href="/favourites">
+					FAVOURITES
 				</a>
 			</div>
 		</div>

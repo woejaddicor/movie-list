@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const baseUrl = 'http://www.omdbapi.com/?i=tt3896198';
-const baseUrl2 = 'http://www.omdbapi.com/?i=';
+const baseUrl = 'https://www.omdbapi.com/?i=tt3896198';
+const baseUrl2 = 'https://www.omdbapi.com/?i=';
 const apikey = '912b16ea';
 
 export const getMovieData = async (search) => {

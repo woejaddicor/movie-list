@@ -24,9 +24,6 @@ export const SearchBar = ({ movie, handleSearch, setMovie }) => {
 			>
 				Search
 			</button>
-			<div>
-				<h1></h1>
-			</div>
 		</div>
 	);
 };
