@@ -13,7 +13,7 @@ const App = () => {
 	const [movie, setMovie] = useState('batman');
 	const [movieData, setMovieData] = useState([]);
 	const [loading, setLoading] = useState(false);
-	const [watchlist, setWatchlist] = useState([{ item: 'test' }]);
+	const [watchlist, setWatchlist] = useState([]);
 
 	useEffect(() => {
 		handleSearch();
