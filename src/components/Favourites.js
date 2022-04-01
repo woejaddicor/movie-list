@@ -16,7 +16,7 @@ export const Favourites = ({ removeFavouriteMovie, favourites }) => {
 						/>
 						<br></br>
 						<button className={styles.singleMovieButton}>
-							<Link to={`/${movie.imdbID}`}>See More</Link>
+							<Link to={`/${movie.imdbID}`}>Info</Link>
 						</button>
 						<button
 							className={styles.removeFavouriteButton}

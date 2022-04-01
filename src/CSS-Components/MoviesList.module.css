@@ -59,7 +59,7 @@
     width: 35%;
     height: 10%;
     border-radius: 8px;
-    margin-top: 20px;
+    margin-top: 10px;
   }
 
   .singleMovieButton:hover {
@@ -69,7 +69,7 @@
   .singleMovieButton a {
     color: white;
     text-decoration: double;
-    font-size: medium;
+    font-size: small;
     font-weight: bold;
   }
   
@@ -79,7 +79,7 @@
     width: 35%;
     height: 10%;
     border-radius: 8px;
-    font-size: medium;
+    font-size: small;
     font-weight: bold;
     overflow: hidden;
     cursor: pointer;

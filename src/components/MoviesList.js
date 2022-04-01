@@ -16,7 +16,7 @@ export const MoviesList = ({ addFavourite, movieData }) => {
 						/>
 						<br></br>
 						<button className={styles.singleMovieButton}>
-							<Link to={`/${movie.imdbID}`}>See More</Link>
+							<Link to={`/${movie.imdbID}`}>Info</Link>
 						</button>
 						<button
 							onClick={() => {
