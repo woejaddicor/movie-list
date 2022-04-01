@@ -18,24 +18,22 @@ const App = () => {
 	console.log(favourites);
 
 	useEffect(() => {
-		handleSearch();
+		const localFavourites = JSON.parse(localStorage.getItem('favourites-list'));
+
+		if (localFavourites) {
+			setFavourites(localFavourites);
+		}
 	}, []);
 
 	useEffect(() => {
-		const localFaves = JSON.parse(localStorage.getItem('favourites-list'));
-		setFavourites(localFaves);
+		handleSearch();
 	}, []);
 
 	const handleSearch = async () => {
-		try {
-			setLoading(true);
-			const data = await getMovieData(movie);
-			setMovieData(data.Search);
-			setLoading(false);
-		} catch (error) {
-			console.log(error.message);
-			setLoading(false);
-		}
+		setLoading(true);
+		const data = await getMovieData(movie);
+		setMovieData(data.Search);
+		setLoading(false);
 	};
 
 	const saveToLocalStorage = (items) => {
