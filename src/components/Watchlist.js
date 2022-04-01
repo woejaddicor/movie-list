@@ -2,7 +2,7 @@ import React from 'react';
 import styles from '../CSS-Components/Favourites.module.css';
 import { Link } from 'react-router-dom';
 
-export const Favourites = ({ removeFavouriteMovie, watchlist }) => {
+export const Watchlist = ({ removeFavouriteMovie, watchlist }) => {
 	return (
 		<div className={styles.movieCards}>
 			{watchlist.map((movie) => {

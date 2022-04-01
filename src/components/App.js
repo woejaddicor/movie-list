@@ -6,7 +6,7 @@ import { getMovieData } from '../apis/omdb';
 import { SearchBar } from './SearchBar';
 import { MoviesList } from './MoviesList';
 import { Header } from './Header';
-import { Favourites } from './Favourites';
+import { Watchlist } from './Watchlist';
 import { SingleMovie } from './SingleMovie';
 
 const App = () => {
@@ -76,7 +76,7 @@ const App = () => {
 							<Route
 								path="/watchlist"
 								element={
-									<Favourites
+									<Watchlist
 										watchlist={watchlist}
 										removeFavouriteMovie={removeFavouriteMovie}
 									/>
