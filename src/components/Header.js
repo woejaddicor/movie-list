@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../CSS-Components/Header.module.css';
+import { Link } from 'react-router-dom';
 
 export const Header = ({ setMovie, search, handleSearch, SearchBar }) => {
 	return (
@@ -11,12 +12,12 @@ export const Header = ({ setMovie, search, handleSearch, SearchBar }) => {
 			/>
 			<div className={styles.buttonsContainer}>
 				<br></br>
-				<a className={styles.navbarHome} href="/">
+				<Link className={styles.navbarHome} to="/">
 					HOME
-				</a>
-				<a className={styles.navbarWatchlist} href="/favourites">
+				</Link>
+				<Link className={styles.navbarWatchlist} to="/favourites">
 					FAVOURITES
-				</a>
+				</Link>
 			</div>
 		</div>
 	);

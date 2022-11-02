@@ -14,6 +14,7 @@ const App = () => {
 	const [movieData, setMovieData] = useState([]);
 	const [loading, setLoading] = useState(false);
 	const [favourites, setFavourites] = useState([]);
+	const [page, setPage] = useState(1);
 
 	useEffect(() => {
 		const localFavourites = JSON.parse(localStorage.getItem('favourites-list'));
