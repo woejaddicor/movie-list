@@ -1,56 +1,64 @@
-.movieCards {
-    max-width: 2000px;
-    max-height: 2500px;
-    min-width: 1440;
-    margin: 0 auto;
-    display: grid;
-    gap: 10px 10px;
-    grid-auto-flow: row;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-	  background-color: black;
-  	grid-template-rows: 1fr 1fr;
+.gridContainer {
+  display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
 }
 
-.card {
-    border-top: 10px solid black;
-	  background-color: rgb(169, 169, 255);
-    overflow: hidden;
-    cursor: pointer;
-    transition: all ease 200ms;
+.movieCards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
   }
 
-  .card:hover {
+  .movieCards:hover {
     transform: scale(1.01);
-    border: 5px solid rgb(142, 142, 248);
   } 
 
   @media (min-width: 400px) {
-    .movieCards { grid-template-columns: repeat(2, 1fr); }
+    .gridContainer { grid-template-columns: repeat(2, 1fr); }
   }
 
   @media (min-width: 800px) {
-    .movieCards { grid-template-columns: repeat(3, 1fr);}
+    .gridContainer { grid-template-columns: repeat(3, 1fr);}
   }
 
   @media (min-width: 1000px) {
-    .movieCards { grid-template-columns: repeat(4, 1fr);}
+    .gridContainer { grid-template-columns: repeat(4, 1fr);}
   }
 
   @media (min-width: 1300px) {
-    .movieCards { grid-template-columns: repeat(5, 1fr); }
+    .gridContainer { grid-template-columns: repeat(5, 1fr); }
   }
-
-  .titleContainer {
-    border-bottom: 8px solid rgb(150, 150, 252);
-    margin-bottom: 20px;
-    padding-top: 5px;
-    background-color: rgb(142, 142, 248);
-  } 
   
   .poster {
-    width: 70%;
-    height: 75%;
-    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    opacity: 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .overlay:hover {
+      opacity: 80%;
   }
   
   .singleMovieButton {
@@ -88,5 +96,5 @@
 
     .watchlistButton:hover {
       transform: scale(1.05);
-    }
+    } 
     

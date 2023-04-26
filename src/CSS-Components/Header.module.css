@@ -1,24 +1,39 @@
-.navbarHome {
-	color: white;
-	text-decoration: double;
-	font-size: 20px;
-	display: inline-flex;
-	margin-right: 20px;
-}
-
-.navbarWatchlist {
-	color: white;
+.navbarButton {
+	color: rgb(142, 142, 248);;
 	text-decoration: double;
 	font-size: 20px;
 	display: inline-flex;
 	margin-left: 20px;
+	border: 3px solid rgb(142, 142, 248);
+	padding: 5px;
+	border-radius: 5px;
+	font-weight: bold;
 }
+
+.navbarButton:hover {
+	background-color: rgb(142, 142, 248);
+	color: black;
+}
+
 
 .navbar {
 	background-color: black;
 	width: 100%;
 	padding: 20px;
 	border-bottom: 5px solid rgb(169, 169, 255);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
-
+  
+  .searchContainer {
+	margin-right: auto; /* Pushes the search bar to the left */
+  }
+  
+  .buttonsContainer {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+  }
+  
 

@@ -1,12 +1,11 @@
 .app {
 	text-align: center;
-	background-color: black;
-}
-
-.noResultsContainer {
-	background-color: black;
 }
 
 .noResultsText {
-	color: purple;
+	color: white;
+}
+
+html, body {
+	background-color: black;
 }
