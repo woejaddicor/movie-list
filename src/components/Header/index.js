@@ -1,6 +1,7 @@
 import React from 'react';
-import styles from '../CSS-Components/Header.module.css';
+import styles from '../../CSS-Components/Header.module.css';
 import { Link } from 'react-router-dom';
+import { SearchBar } from '.././SearchBar';
 
 export const Header = ({ setMovie, search, handleSearch, SearchBar }) => {
 	return (

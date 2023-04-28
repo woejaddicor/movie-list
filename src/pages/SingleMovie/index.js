@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { getSingleMovie } from '../apis/omdb';
-import styles from '../CSS-Components/SingleMovie.module.css';
+import { getSingleMovie } from '../../apis/omdb';
+import styles from '../../CSS-Components/SingleMovie.module.css';
 
 export const SingleMovie = ({ addFavourite }) => {
 	const [movie, setMovie] = useState([]);

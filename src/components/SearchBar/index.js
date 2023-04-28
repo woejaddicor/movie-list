@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../CSS-Components/SearchBar.module.css';
+import styles from '../../CSS-Components/SearchBar.module.css';
 
 export const SearchBar = ({ movie, handleSearch, setMovie }) => {
 	return (
@@ -10,12 +10,6 @@ export const SearchBar = ({ movie, handleSearch, setMovie }) => {
 				value={movie}
 				onChange={(e) => setMovie(e.target.value)}
 				placeholder="Search for a movie"
-				onKeyPress={(e) => {
-					if (e.key === 'Enter') {
-						e.preventDefault();
-						handleSearch();
-					}
-				}}
 			/>
 			<button
 				type="submit"

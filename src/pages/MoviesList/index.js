@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styles from '../CSS-Components/MoviesList.module.css';
+import styles from '../../CSS-Components/MoviesList.module.css';
+import { AddFavourite } from '../../components/AddFavourite';
 
-export const MoviesList = ({ addFavourite, movieData }) => {
+export const MoviesList = ({ movieData }) => {
 	return (
 		<div className={styles.gridContainer}>
 			{movieData.map((movie) => {
@@ -22,14 +23,7 @@ export const MoviesList = ({ addFavourite, movieData }) => {
 								<button className={styles.singleMovieButton}>
 									<Link to={`/${movie.imdbID}`}>Info</Link>
 								</button>
-								<button
-									onClick={() => {
-										addFavourite(movie);
-									}}
-									className={styles.watchlistButton}
-								>
-									Add
-								</button>
+								<AddFavourite movie={movie} />
 							</div>
 						</div>
 					</div>
