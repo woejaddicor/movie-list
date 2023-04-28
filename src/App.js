@@ -39,13 +39,9 @@ const App = () => {
 					<>
 						<Routes>
 							<Route path="/favourites" element={<Favourites />}></Route>
+							<Route path="/:imdbID" element={<SingleMovie />}></Route>
 							<Route
-								path="/:imdbID"
-								// element={<SingleMovie addFavourite={addFavourite} />}
-							></Route>
-							<Route
-								default
-								path="/"
+								path="/search"
 								element={<MoviesList movieData={movieData} />}
 							></Route>
 						</Routes>
