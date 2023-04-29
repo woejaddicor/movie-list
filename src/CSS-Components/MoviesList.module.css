@@ -49,7 +49,6 @@
     right: 0;
     bottom: 0;
     opacity: 0;
-    opacity: 0;
     background-color: black;
     display: flex;
     justify-content: center;
@@ -59,23 +58,33 @@
   }
   
   .overlay:hover {
-      opacity: 80%;
+    opacity: 80%;
+  }
+  
+  .overlayButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
   
   .singleMovieButton {
     color: rgb(142, 142, 248);
     text-decoration: double;
-    font-size: 20px;
-    display: inline-flex;
-    margin-left: 20px;
+    font-size: 25px;
+    margin: 0 10px;
     border: 3px solid rgb(142, 142, 248);
     padding: 5px;
     border-radius: 5px;
     font-weight: bold;
     background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-
+  
   .singleMovieButton:hover {
+    background-color:rgb(142, 142, 248);
     transform: scale(1.05);
   }
   
@@ -85,28 +94,45 @@
     font-size: small;
     font-weight: bold;
   }
+
+  .singleMovieButton a:hover {
+    color: black;
+  }
   
   .watchlistButton {
     color: rgb(142, 142, 248);
     text-decoration: double;
-    font-size: 20px;
-    display: inline-flex;
-    margin-left: 20px;
+    font-size: 25px;
+    margin: 0 10px;
     border: 3px solid rgb(142, 142, 248);
     padding: 5px;
     border-radius: 5px;
     font-weight: bold;
     background-color: black;
-    }
-
-    .watchlistButton:hover {
-      transform: scale(1.05);
-    }
-
-    .watchlistButton a {
-      color: rgb(142, 142, 248);
-      text-decoration: double;
-      font-size: small;
-      font-weight: bold;
-    }
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .watchlistButton:hover {
+    background-color: rgb(142, 142, 248);
+    transform: scale(1.05);
+    color: black;
+  }
+  
+  .watchlistButton a {
+    color: rgb(142, 142, 248);
+    text-decoration: double;
+    font-size: small;
+    font-weight: bold;
+  }
+  
+  .overlayTitle {
+    color:rgb(142, 142, 248);
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+  }
+  
