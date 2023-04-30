@@ -43,26 +43,6 @@
 	font-style: italic;
 	color: white; 
   }
-
-  .watchlistButton {
-	text-align: center;
-	background-color: black;
-	color: white;
-	width: 40%;
-	height: 8vh;
-	font-size: 20px;
-	font-weight: bold;
-	border-radius: 5px;
-	margin-bottom: 20px;
-	overflow: hidden;
-    cursor: pointer;
-    transition: all ease 200ms;
-  }
-
-  .watchlistButton:hover {
-	transform: scale(1.05);
-	border: 2px solid grey;
-  }
   
   .imdbRating {
 	  font-size: 25px;
@@ -72,5 +52,24 @@
 
   .movieTitle {
 	  font-size: 50px;
+	  font-family: 'Goldman', cursive;
   }
-  
+
+  .buttonContainer {
+	display: flex;
+  	justify-content: center;
+  	padding: 15px;
+  }
+
+
+  .addMovie {
+	color: rgb(142, 142, 248);
+	text-decoration: double;
+	display: inline-flex;
+	margin-left: 20px;
+	border: 3px solid rgb(142, 142, 248);
+	padding: 5px;
+	border-radius: 5px;
+	background-color: black;
+	font-family: 'Goldman', cursive;
+  }

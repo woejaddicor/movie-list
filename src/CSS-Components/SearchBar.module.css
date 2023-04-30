@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+
 .searchbarContainer {
 	width: 100%;
 }
@@ -7,27 +9,28 @@
 	padding: 5px;
 	border-radius: 5px;
 	margin-top: 5px;
-	font-size: large;
+	font-size: 20px;
 	text-transform: capitalize;
 	background-color: rgb(255, 255, 255);
 	font-weight: bold;
-	border: 3px solid  rgb(48, 48, 48);
+	display: flex;
+	font-family: 'Goldman', cursive;
 }
 
-.searchButton {
-	margin-left: 10px;
-	width: 25%;
-	height: 10%;
-	border-radius: 5px;
-	padding: 5px;
-	border: 2px solid  rgb(142, 142, 248);
-	background-color: rgb(0, 0, 0);
-	font-size: larger;
-	font-weight: bold;
-	color: rgb(142, 142, 248);
-}
-
-.searchButton:hover {
-	background-color: rgb(142, 142, 248);
-	color: black;
-}
+@media (max-width: 768px) {
+	.searchbarContainer {
+	  width: 100%;
+	}
+  
+	.searchbar {
+	  width: 100%;
+	  padding: 5px;
+	  border-radius: 5px;
+	  margin-top: 5px;
+	  font-size: 16px;
+	  text-transform: capitalize;
+	  background-color: rgb(255, 255, 255);
+	  font-weight: bold;
+	  display: flex;
+	}
+  }

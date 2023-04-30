@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+
 .gridContainer {
 	display: grid;
 	  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -65,13 +67,11 @@
 	.singleMovieButton {
 	  color: rgb(142, 142, 248);
 	  text-decoration: double;
-	  font-size: 20px;
 	  display: inline-flex;
 	  margin-left: 20px;
 	  border: 3px solid rgb(142, 142, 248);
 	  padding: 5px;
 	  border-radius: 5px;
-	  font-weight: bold;
 	  background-color: black;
 	}
   
@@ -84,14 +84,14 @@
 	.singleMovieButton a {
 	  color: rgb(142, 142, 248);
 	  text-decoration: double;
-	  font-size: small;
 	  font-weight: bold;
+	  font-size: 25px;
 	}
 
 	  .removeFavouritesButton {
 		color: rgb(142, 142, 248);
 		text-decoration: double;
-		font-size: 20px;
+		font-size: 25px;
 		display: inline-flex;
 		margin-left: 20px;
 		border: 3px solid rgb(142, 142, 248);
@@ -105,4 +105,14 @@
 		background-color:  rgb(142, 142, 248);
 		color: black;
 		transform: scale(1.05);
+	  }
+
+	  .overlayTitle {
+		color:rgb(142, 142, 248);
+		position: absolute;
+		top: 30%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 20px;
+		font-family: 'Goldman', cursive;
 	  }

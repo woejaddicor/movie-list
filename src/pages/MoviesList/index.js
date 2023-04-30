@@ -20,9 +20,7 @@ export const MoviesList = ({ movieData }) => {
 								alt="Stock poster"
 							/>
 							<div className={styles.overlay}>
-								<h1 className={styles.overlayTitle}>
-									{movie.Title} - {movie.Year}
-								</h1>
+								<h1 className={styles.overlayTitle}>{movie.Title}</h1>
 								<button className={styles.singleMovieButton}>
 									<Link to={`/${movie.imdbID}`}>Info</Link>
 								</button>
