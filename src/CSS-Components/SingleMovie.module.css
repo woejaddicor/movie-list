@@ -60,16 +60,3 @@
   	justify-content: center;
   	padding: 15px;
   }
-
-
-  .addMovie {
-	color: rgb(142, 142, 248);
-	text-decoration: double;
-	display: inline-flex;
-	margin-left: 20px;
-	border: 3px solid rgb(142, 142, 248);
-	padding: 5px;
-	border-radius: 5px;
-	background-color: black;
-	font-family: 'Goldman', cursive;
-  }
