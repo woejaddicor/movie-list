@@ -34,7 +34,7 @@
     position: absolute;
     bottom: 0;
     width: 100vw;
-    height: 500px;
+    height: 400px;
     background: linear-gradient(90deg, rgb(142, 142, 248), rgb(227, 46, 255));
     border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
     will-change: border-radius, transform, opacity;
