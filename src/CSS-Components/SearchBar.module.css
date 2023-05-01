@@ -18,11 +18,11 @@
 
 @media (max-width: 768px) {
 	.searchbarContainer {
-	  min-width: 100%;
+	  width: 100%;
 	}
   
 	.searchbar {
-	  min-width: 100%;
+	  width: 100%;
 	  padding: 5px;
 	  border-radius: 5px;
 	  margin-top: 5px;
