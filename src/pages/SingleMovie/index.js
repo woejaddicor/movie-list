@@ -24,7 +24,6 @@ export const SingleMovie = ({ addFavourite }) => {
 				<p className={styles.imdbRating}>
 					IMDB Rating : {movie.imdbRating} ⭐️
 				</p>
-				<p className={styles.imdbRating}>IMDB Votes : {movie.imdbVotes}</p>
 				<p className={styles.imdbRating}>Metascore : {movie.Metascore}</p>
 			</div>
 			<div className={styles.info1}>

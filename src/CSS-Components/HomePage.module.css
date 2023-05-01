@@ -1,9 +1,82 @@
-.homeBody {
-    margin-top: 10%;
+.titleContainer {
+    margin-top: 100px;
 }
 
 .title {
-    font-size: 60px;
+    font-size: 100px;
     color: rgb(142, 142, 248);
-    font-family: 'Goldman', cursive;;
+    font-family: 'Goldman', cursive;
+}
+
+.aboutText {
+    color: rgb(142, 142, 248);
+    font-size: 25px;
+    font-family: 'Goldman', cursive;
+}
+
+.homeBody {
+    height: 90vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+
+.sliderThumbOuter {
+    position: fixed;
+    height: 50px;
+    width: 90%;
+    top: 110%;
+    transform: translateX(50px);
+}
+
+.sliderThumbInner::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 500px;
+    background: linear-gradient(90deg, rgb(142, 142, 248), rgb(227, 46, 255));
+    border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
+    will-change: border-radius, transform, opacity;
+    animation: sliderShape 5s linear infinite;
+}
+
+@keyframes sliderShape{
+    0%,100%{
+        border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+        transform: translate3d(0,0,0) rotateZ(0.01deg);
+    }
+    34%{
+        border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
+        transform:  translate3d(0,5px,0) rotateZ(0.01deg);
+    }
+    50%{
+        transform: translate3d(0,0,0) rotateZ(0.01deg);
+    }
+    67%{
+        border-radius: 100% 60% 60% 100% / 100% 100% 60% 60% ;
+      transform: translate3d(0,-3px,0) rotateZ(0.01deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .titleContainer {
+      margin-top: 10px;
+      display: block;
+    }
+
+    .title {
+     font-size: 70px;
+    }
+
+    .aboutText {
+        font-size: 25px;
+        overflow: wrap;
+    }
+    .sliderThumbOuter {
+        position: fixed;
+        height: 60px;
+        width: 50%;
+        transform: translateX(50px);
+    }
 }
