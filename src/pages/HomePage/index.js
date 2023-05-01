@@ -9,6 +9,15 @@ export const HomePage = () => {
 				<p className={styles.aboutText}>
 					Search, favourite, and get more information about your favourite
 					films.
+					<br></br>
+					<br></br>
+					Built by{' '}
+					<a
+						className={styles.githubLink}
+						href="https://github.com/woejaddicor"
+					>
+						Joe Waddicor
+					</a>
 				</p>
 			</div>
 			<div className={styles.sliderThumbOuter}>

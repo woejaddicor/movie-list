@@ -1,5 +1,8 @@
 .titleContainer {
     margin-top: 100px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
 }
 
 .title {
@@ -12,6 +15,14 @@
     color: rgb(142, 142, 248);
     font-size: 25px;
     font-family: 'Goldman', cursive;
+}
+
+.githubLink {
+    color: rgb(0, 255, 234)
+}
+
+.githubLink:hover {
+    color:rgb(142, 142, 248)
 }
 
 .homeBody {
@@ -40,6 +51,7 @@
     will-change: border-radius, transform, opacity;
     animation: sliderShape 5s linear infinite;
 }
+
 
 @keyframes sliderShape{
     0%,100%{
