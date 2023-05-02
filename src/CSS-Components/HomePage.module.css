@@ -92,3 +92,19 @@
         transform: translateX(50px);
     }
 }
+
+@media (min-width: 1749px) {
+    .titleContainer {
+      margin-top: 10px;
+      display: block;
+    }
+
+    .title {
+     font-size: 70px;
+    }
+
+    .aboutText {
+        font-size: 25px;
+        overflow: wrap;
+    }
+}
